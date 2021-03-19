@@ -1,0 +1,16 @@
+<h2>User info</h2>
+<%= form_with model:@user, local:true do |f| %>
+  <label for="inputName">Name</label>
+  <%= f.text_field :name %>
+  
+  <label for="image">Image</label>
+  <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+  <label for="inputImage">Image</label>
+  <%= f.attachment_field :image %>
+  
+  <label for="inputIntroduction">introduction</label>
+  <%= f.text_area :introduction %>
+  
+  <%= f.submit "Update User" %>
+  <% end 
+  
