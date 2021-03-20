@@ -312,3 +312,503 @@ ActionView::Template::Error (undefined method `name' for nil:NilClass):
     12:         <td>introduction</td>
   
 app/views/books/index.html.erb:9:in `_app_views_books_index_html_erb___523899155374648562_70319531233840'
+Started GET "/" for 126.91.74.95 at 2021-03-20 08:30:01 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 426ms (Views: 416.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 126.91.74.95 at 2021-03-20 08:30:03 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 126.91.74.95 at 2021-03-20 08:30:07 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 126.91.74.95 at 2021-03-20 08:32:28 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 309ms (Views: 299.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 126.91.74.95 at 2021-03-20 08:32:30 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 126.91.74.95 at 2021-03-20 08:32:33 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 126.91.74.95 at 2021-03-20 08:32:34 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 126.91.74.95 at 2021-03-20 08:32:35 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:34:29 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:     <tbody>
+     6:       <tr>
+     7:         <td>name</td>
+     8:         <td><%= @book.user.name %></td>
+     9:       </tr>
+    10:       <tr>
+    11:         <td>introduction</td>
+  
+app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb__2429668999326809826_70039152739060'
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:41:31 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+Completed 404 Not Found in 22ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=1):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:42:38 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:     <tbody>
+     6:       <tr>
+     7:         <td>name</td>
+     8:         <td><%= @book.user.name %></td>
+     9:       </tr>
+    10:       <tr>
+    11:         <td>introduction</td>
+  
+app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb__2429668999326809826_70039153258560'
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:43:10 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (220.6ms)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f666c0bacc8>:0x00007f666c0b9328>
+Did you mean?  @user):
+     5:     <tbody>
+     6:       <tr>
+     7:         <td>name</td>
+     8:         <td><%= user.name %></td>
+     9:       </tr>
+    10:       <tr>
+    11:         <td>introduction</td>
+  
+app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb__2429668999326809826_70038938049040'
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:43:24 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `introduction' for #<User:0x00007f6685b8f860>):
+     9:       </tr>
+    10:       <tr>
+    11:         <td>introduction</td>
+    12:         <td><%= @user.introduction %></td>
+    13:       </tr>
+    14:     </tbody>
+    15:   </table>
+  
+app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb__2429668999326809826_70039153439380'
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:45:33 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `introduction' for #<User:0x00007f668596fd00>):
+     9:       </tr>
+    10:       <tr>
+    11:         <td>introduction</td>
+    12:         <td><%= @user.introduction %></td>
+    13:       </tr>
+    14:     </tbody>
+    15:   </table>
+  
+app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb__2429668999326809826_70039152325860'
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:46:27 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 67ms (Views: 63.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:52:21 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:17: syntax error, unexpected '<', expecting end
+      </tr>
+      ^
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:18: unknown regexp options - tbdy
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:19: syntax error, unexpected '<'
+  </table>
+  ^
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:27: unknown regexp option - h
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:27: syntax error, unexpected tINTEGER, expecting end
+<h1>New Book</h1>
+               ^
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+...put_buffer.safe_append='<div id="error_explanation">
+...                             ^~
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:31: syntax error, unexpected '<'
+  <h2>
+  ^
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:34: syntax error, unexpected '<'
+  </h2>
+  ^
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:37: unknown regexp option - l
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:40: unknown regexp options - dv
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:43: syntax error, unexpected '<', expecting end
+<label for="book_title">Title<...
+^
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:46: unknown regexp options - labl
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:49: syntax error, unexpected tCONSTANT, expecting end
+...uffer.append=( f.submit 'Create Book' );@output_buffer.safe_...
+...                         ^~~~~~
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:54: unterminated string meets end of file
+          end
+              ^
+/home/ec2-user/environment/bookers2-1/app/views/users/show.html.erb:54: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/users/show.html.erb:17: syntax error, unexpected '<', expecting end
+app/views/users/show.html.erb:18: unknown regexp options - tbdy
+app/views/users/show.html.erb:19: syntax error, unexpected '<'
+app/views/users/show.html.erb:27: unknown regexp option - h
+app/views/users/show.html.erb:27: syntax error, unexpected tINTEGER, expecting end
+app/views/users/show.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/users/show.html.erb:31: syntax error, unexpected '<'
+app/views/users/show.html.erb:34: syntax error, unexpected '<'
+app/views/users/show.html.erb:37: unknown regexp option - l
+app/views/users/show.html.erb:40: unknown regexp options - dv
+app/views/users/show.html.erb:43: syntax error, unexpected '<', expecting end
+app/views/users/show.html.erb:46: unknown regexp options - labl
+app/views/users/show.html.erb:49: syntax error, unexpected tCONSTANT, expecting end
+app/views/users/show.html.erb:54: unterminated string meets end of file
+app/views/users/show.html.erb:54: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:52:35 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `introduction' for #<User:0x00007f668596d8c0>):
+    10:       <tr>
+    11:         <td>introduction</td>
+    12:         <% if %>
+    13:         <td><%= @user.introduction %></td>
+    14:         <% else %>
+    15:         <td></td>
+    16:         <% end %>
+  
+app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__2429668999326809826_70039152321180'
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:54:20 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 126.91.74.95 at 2021-03-20 08:54:28 +0000
+Cannot render console from 126.91.74.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 126.233.29.31 at 2021-03-20 10:00:35 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 322ms (Views: 308.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 126.233.29.31 at 2021-03-20 10:07:53 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 266ms (Views: 253.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 126.233.29.31 at 2021-03-20 10:07:56 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"faNvmkrlXumIrrUrDtpq9Wj3MrL2teaKEeLcfRWY6NUnak4C2Pl8D7UZsXO/ys3GL5iyAJDnJh1AXx1mkgJp0g=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://deb28996e2774cccba36764ea4bfe458.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 22ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 126.233.29.31 at 2021-03-20 10:07:56 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    40:       </li>
+    41:     <% else %>
+    42:       <li>
+    43:         <%= link_to user_path(current_user.id) do %>
+    44:         <i class="fas fa-home"></i>Home
+    45:         <% end %>
+    46:       </li>
+  
+app/views/layouts/application.html.erb:43:in `_app_views_layouts_application_html_erb___3513374957141137302_69824701624360'
+Started GET "/" for 126.233.29.31 at 2021-03-20 10:08:54 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_pay' for #<#<Class:0x00000000050972e8>:0x00007f02a8b13328>
+Did you mean?  root_path):
+    40:       </li>
+    41:     <% else %>
+    42:       <li>
+    43:         <%= link_to root_pay do %>
+    44:         <i class="fas fa-home"></i>Home
+    45:         <% end %>
+    46:       </li>
+  
+app/views/layouts/application.html.erb:43:in `_app_views_layouts_application_html_erb___3513374957141137302_69824698472480'
+Started GET "/" for 126.233.29.31 at 2021-03-20 10:09:08 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 126.233.29.31 at 2021-03-20 10:09:10 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 126.233.29.31 at 2021-03-20 10:09:14 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 126.233.29.31 at 2021-03-20 10:09:16 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 126.233.29.31 at 2021-03-20 10:09:17 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 126.233.29.31 at 2021-03-20 10:09:18 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.233.29.31 at 2021-03-20 10:09:26 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rnom9Vo+swsrRQoIrz3hC3+MXlPjwessv+VKGQpU/9aBpKJqHPO6OEmQNrBHLo+W1alsLMndDxRF9KFAsSAhlA==", "user"=>{"name"=>"kei", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "kei"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://deb28996e2774cccba36764ea4bfe458.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 316ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 126.233.29.31 at 2021-03-20 10:09:27 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books" for 126.233.29.31 at 2021-03-20 10:09:44 +0000
+Cannot render console from 126.233.29.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     6:     <tbody>
+     7:       <tr>
+     8:         <td>name</td>
+     9:         <td><%= @book.user.name %></td>
+    10:       </tr>
+    11:       <tr>
+    12:         <td>introduction</td>
+  
+app/views/books/index.html.erb:9:in `_app_views_books_index_html_erb__2493795560791829946_69824592822280'
