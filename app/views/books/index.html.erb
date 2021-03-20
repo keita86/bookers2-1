@@ -1,3 +1,26 @@
+
+<div>
+  <h2>User info</h2>
+  <image class="prf"></image>
+  <table>
+    <tbody>
+      <tr>
+        <td>name</td>
+        <td><%= @book.user.name %></td>
+      </tr>
+      <tr>
+        <td>introduction</td>
+        <td><%= @book.user.introduction %></td>
+      </tr>
+    </tbody>
+  </table>
+  <% if @user.id == current_user.id %>
+  <%= link_to edit_user_path(@user) do %>
+  <i class="fas fa-user-cog"></i>
+  <% end %>
+  <% end %>
+</div>
+
 <h1>New Book</h1>
 <%= form_with model:@book, local:true do |f| %>
 <% if @book.errors.any? %>
