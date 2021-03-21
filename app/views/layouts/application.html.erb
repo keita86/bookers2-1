@@ -19,12 +19,12 @@
     <%= link_to "Bookers", root_path %>
     <% if user_signed_in? %>
       <li>
-        <%= link_to root_path do %>
+        <%= link_to user_path(current_user.id) do %>
         <i class="fas fa-home"></i>Home
         <% end %>
       </li>
       <li>
-        <%= link_to user_path(current_user.id) do %>
+        <%= link_to users_path do %>
         <i class="fas fa-users"></i>User
         <% end %>
       </li>

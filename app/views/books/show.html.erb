@@ -1,6 +1,6 @@
 <div>
   <h2>User info</h2>
-  <image class="prf"></image>
+  <image class="prf"><%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></image>
   <table>
     <tbody>
       <tr>
@@ -13,23 +13,27 @@
       </tr>
     </tbody>
   </table>
-  <% if @user.id == current_user.id %>
-  <%= link_to edit_user_path(@user) do %>
-  <i class="fas fa-user-cog"></i>
+  <% if @user == current_user.id %>
+  <%= link_to edit_user_path(@book) do %>
+    <i class="fas fa-user-cog"></i>
+  <% end %>
+  <% else %>
+  <%= link_to user_path(current_user.id) do %>
+    <i class="fas fa-user-cog"></i>
   <% end %>
   <% end %>
 </div>
 
 <h1>New Book</h1>
-<%= form_with model:@book, local:true do |f| %>
-<% if @book.errors.any? %>
+<%= form_with model:@post, local:true do |f| %>
+<% if @post.errors.any? %>
 <div id="error_explanation">
   <h2>
-    <%= pluralize(@book.errors.count, "error") %>
+    <%= pluralize(@post.errors.count, "error") %>
     prohibited this obj from being saved:
   </h2>
   <ul>
-    <% @book.errors.full_messages.each do |message| %>
+    <% @post.errors.full_messages.each do |message| %>
     <li><%= message %></li>
     <% end %>
   </ul>
@@ -54,7 +58,7 @@
       <td></td>
       <td><%= @book.title %></td>
       <td><%= @book.body %></td>
-      <% if current_user.id == @book.user_id %>
+      <% if @book.user_id == current_user.id %>
         <%= link_to "Edit", edit_user_path(@book) %>
         <%= link_to "Destroy", book_path(@book), method: :delete, "date-confirm" => "Are you sure?" %>
       <% end %>
