@@ -1,7 +1,7 @@
 
 <div>
   <h2>User info</h2>
-  <image class="prf"><%= attachment_image_tag @user, :profile_image, :fill, 50, 50,  fallback: "no_image.jpg" %></image>
+  <image class="prf"><%= attachment_image_tag current_user, :profile_image, :fill, 50, 50,  fallback: "no_image.jpg" %></image>
   <table>
     <tbody>
       <tr>
@@ -59,7 +59,7 @@
     <tbody>
       <% @books.each do |book| %>
       <tr>
-        <td><%= attachment_image_tag @user, :profile_image, 50, 50,  fallback: "no_image.jpg" %></td>
+        <td><%= attachment_image_tag book.user, :profile_image, :fill, 50, 50,  fallback: "no_image.jpg" %></td>
         <td><%= link_to book.title, book_path(book.id) %></td>
         <td><%= book.body %></td>
         <td></td>
