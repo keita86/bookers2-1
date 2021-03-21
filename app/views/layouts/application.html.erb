@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-<script src="https://kit.fontawesome.com/cd73e3974b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cd73e3974b.js" crossorigin="anonymous"></script>
     <title>Bookers2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,7 +17,9 @@
   <% end %>
 
   <body>
-    <%= link_to "Bookers", root_path %>
+    <header>
+      <nav class="navbar">
+            <%= link_to "Bookers", root_path %>
     <% if user_signed_in? %>
       <li>
         <%= link_to user_path(current_user.id) do %>
@@ -25,12 +28,12 @@
       </li>
       <li>
         <%= link_to users_path do %>
-        <i class="fas fa-users"></i>User
+        <i class="fas fa-users"></i>Users
         <% end %>
       </li>
       <li>
         <%= link_to books_path do %>
-        <i class="fas fa-book-open"></i>Book
+        <i class="fas fa-book-open"></i>Books
         <% end %>
       </li>
       <li>
@@ -60,6 +63,20 @@
         <% end %>
       </li>
     <% end %>
+      </nav>
+    </header>
     <%= yield %>
+    <footer>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="mx-auto">
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
