@@ -1,6 +1,6 @@
 <div>
   <h2>User info</h2>
-  <image class="prf"><%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></image>
+  <image class="prf"><%= attachment_image_tag @book.user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></image>
   <table>
     <tbody>
       <tr>
@@ -53,13 +53,15 @@
 <table>
   <tbody>
     <tr>
-      <td></td>
+      <td><%= attachment_image_tag @book.user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></td>
       <td><%= @book.title %></td>
       <td><%= @book.body %></td>
-      <% if @user == current_user.id %>
-        <%= link_to "Edit", edit_user_path(@book) %>
+      <td>
+      <% if @book.user.id == current_user.id %>
+        <%= link_to "Edit", edit_book_path(@book) %>
         <%= link_to "Destroy", book_path(@book), method: :delete, "date-confirm" => "Are you sure?" %>
       <% end %>
+      </td>
     </tr>
   </tbody>
 </table>
