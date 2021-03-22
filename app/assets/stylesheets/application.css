@@ -20,10 +20,6 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: #343a40;
-}
-
 .navbar {
   list-style: none;
 }
