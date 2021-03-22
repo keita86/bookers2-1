@@ -11,61 +11,64 @@
   </head>
 
   <body>
-    <header>
-      <div class="container bg-secondary py-3">
+    <header class="bg-secondary py-3 mb-4">
+      <div class="container">
         <div class="row">
           <div class="col text-white">
-            <%= link_to "Bookers", root_path %>
-            <% if user_signed_in? %>
-          </div>
+            <%= link_to root_path do %>
+            <strong class="text-white">Bookers</strong>
+            <% end %>
+            </div>
 
-            <div class="text-white mr-2">
-             <%= link_to user_path(current_user.id) do %>
-             <i class="fas fa-home"></i>Home
+            <% if user_signed_in? %>
+            <div class="mr-3">
+             <%= link_to  user_path(current_user.id) do %>
+             <i class="fas fa-home text-white ">Home</i>
              <% end %>
             </div>
-            <div class="text-white mr-2">
+            <div class="mr-3">
               <%= link_to users_path do %>
-              <i class="fas fa-users"></i>Users
+              <i class="fas fa-users text-white">Users</i>
               <% end %>
             </div>
-            <li>
+            <div class="mr-3">
               <%= link_to books_path do %>
-              <i class="fas fa-book-open"></i>Books
+              <i class="fas fa-book-open text-white">Books</i>
               <% end %>
-            </li>
-            <li>
+            </div>
+            <div class="mr-3">
               <%= link_to  destroy_user_session_path, method: :delete do %>
-              <i class="fas fa-sign-out-alt"></i>logout
+              <i class="fas fa-sign-out-alt text-white">logout</i>
               <% end %>
             </li>
           <% else %>
-            <li>
+            <div class="mr-3">
               <%= link_to root_path do %>
-              <i class="fas fa-home"></i>Home
+              <i class="fas fa-home text-white">Home</i>
               <% end %>
-            </li>
-            <li>
+            </div>
+            <div class="mr-3">
               <%= link_to  home_about_path do %>
-              <i class="fas fa-link"></i>About
+              <i class="fas fa-link text-white">About</i>
               <% end %>
-            </li>
-            <li>
+            </div>
+            <div class="mr-3">
               <%= link_to new_user_registration_path do %>
-              <i class="fas fa-user-plus"></i>sign up
+              <i class="fas fa-user-plus text-white">sign up</i>
               <% end %>
-            </li>
-            <li>
+            </div>
+            <div class="mr-3">
               <%= link_to new_user_session_path do %>
-              <i class="fas fa-sign-in-alt"></i>login
+              <i class="fas fa-sign-in-alt text-white">login</i>
               <% end %>
-            </li>
+            </div>
 
           <% end %>
           </nav>
         </div>
       </div>
     </header>
+    <main class="container">
     <% if flash[:notice] %>
     <div class="flash">
     <%= flash[:notice] %>
@@ -73,8 +76,9 @@
     <% end %>
 
     <%= yield %>
-    <footer>
-      <div class="container mt-5 bg-secondary w-100">
+    </main>
+    <footer class="mt-5 bg-secondary w-100">
+      <div class="container">
         <div class="row">
           <div class="mx-auto pt-3 ">
             <p class="text-white">CopyRight Infratop.inc</p>

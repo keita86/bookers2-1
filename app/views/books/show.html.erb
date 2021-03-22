@@ -1,16 +1,16 @@
 <div class="container px-5 px-sm-0">
   <div class="row">
     <div class="col-md-3">
-      <div>
+      <div class="mb-4">
         <h2>User info</h2>
-        <image class="prf"><%= attachment_image_tag @book.user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></image>
-        <table>
+        <image class="prf"><%= attachment_image_tag @book.user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %></image>
+        <table class="table">
           <tbody>
-            <tr>
+            <tr class="my-2">
               <td>name</td>
               <td><%= @book.user.name %></td>
             </tr>
-            <tr>
+            <tr class="my-2">
               <td>introduction</td>
               <td><%= @book.user.introduction %></td>
             </tr>
@@ -37,11 +37,11 @@
       </div>
       <% end %>
 
-      <label for="book_title">Title</label>
-      <%= f.text_field :title %>
+      <label for="book_title">Title</label><br/>
+      <%= f.text_field :title %><br/>
 
-      <label for="book_body">Opinion</label>
-      <%= f.text_area :body %>
+      <label for="book_body">Opinion</label><br/>
+      <%= f.text_area :body %><br/>
 
       <%= f.submit 'Create Book' %>
       <% end %>
@@ -49,16 +49,16 @@
 
     <div class="col-md-8 offset-md-1">
       <h2>Book detail</h2>
-      <table>
+      <table class="table">
         <tbody>
           <tr>
-            <td><%= attachment_image_tag @book.user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></td>
-            <td><%= @book.title %></td>
-            <td><%= @book.body %></td>
-            <td>
+            <td scope="col"><%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
+            <td scope="col"><%= @book.title %></td>
+            <td scope="col"><%= @book.body %></td>
+            <td scope="col">
             <% if @book.user.id == current_user.id %>
               <%= link_to "Edit", edit_book_path(@book) %>
-              <%= link_to "Destroy", book_path(@book), method: :delete, "date-confirm" => "Are you sure?" %>
+              <%= link_to "Destroy", book_path(@book), method: :delete, "data-cofirm" => "Are you sure?" %>
             <% end %>
             </td>
           </tr>

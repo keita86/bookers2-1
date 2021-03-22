@@ -1,18 +1,18 @@
 <div class="container px-5 px-sm-0">
   <div class="row">
     <div class="col-md-3">
-      <div>
+      <div class="mb-4">
         <h2>User info</h2>
-        <image class="prf"><%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg" %></image>
-        <table>
+        <image class="prf"><%= attachment_image_tag current_user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></image>
+        <table class="table">
           <tbody>
-            <tr>
+            <tr class="my-2">
               <td>name</td>
-              <td><%= @user.name %></td>
+              <td><%= current_user.name %></td>
             </tr>
-            <tr>
+            <tr class="my-2">
               <td>introduction</td>
-              <td><%= @user.introduction %></td>
+              <td><%= current_user.introduction %></td>
             </tr>
           </tbody>
         </table>
@@ -50,20 +50,20 @@
     </div>
 
     <div class="col-md-8 offset-md-1">
-      <h1>Users</h1>
-      <table>
+      <h2>Users</h2>
+      <table class="table">
         <thead>
           <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th colspan="3"></th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
           </tr>
         </thead>
 
         <tbody>
         <% @users.each do |user| %>
           <tr>
-            <td><%= attachment_image_tag user, :profile_image, :fill, 50, 50,  fallback: "no_image.jpg" %></td>
+            <td><%= attachment_image_tag user, :profile_image, :fill, 60, 60,  fallback: "no_image.jpg" %></td>
             <td><%= user.name %></td>
             <td><%= link_to "Show", user_path(user.id) %></td>
           </tr>
