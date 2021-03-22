@@ -17,9 +17,13 @@
           </tbody>
         </table>
         <% if @user.id == current_user.id %>
-        <%= link_to edit_user_path(@user) do %>
-        <i class="fas fa-user-cog"></i>
+          <%= link_to edit_user_path(@user.id) do %>
+          <i class="fas fa-user-cog"></i>
         <% end %>
+        <% else %>
+          <%= link_to user_path(current_user) do %>
+          <i class="fas fa-user-cog"></i>
+          <% end %>
         <% end %>
       </div>
 
