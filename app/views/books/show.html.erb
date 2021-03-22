@@ -16,18 +16,12 @@
             </tr>
           </tbody>
         </table>
-        <% if @user == current_user.id %>
-        <%= link_to edit_user_path(@book) do %>
+        <%= link_to edit_user_path(current_user.id) do %>
           <i class="fas fa-user-cog"></i>
-        <% end %>
-        <% else %>
-        <%= link_to user_path(current_user.id) do %>
-          <i class="fas fa-user-cog"></i>
-        <% end %>
         <% end %>
       </div>
 
-      <h1>New Book</h1>
+      <h1>New book</h1>
       <%= form_with model:@post, local:true do |f| %>
       <% if @post.errors.any? %>
       <div id="error_explanation">

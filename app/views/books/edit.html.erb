@@ -22,14 +22,14 @@
       <%= f.text_field :title %><br/>
 
       <label for="book_body">Opinion</label><br/>
-      <%= f.text_area :body %><br
+      <%= f.text_area :body %><br/>
 
       <%= f.submit 'Update Book' %>
       <% end %>
 
       <%= link_to "Show", book_path(@book.id) %>
       ｜
-      <%= link_to "Back",book_path %>
+      <%= link_to "Back", book_path %>
 
       </body>
     </div>
