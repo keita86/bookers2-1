@@ -52,7 +52,12 @@
       <table class="table">
         <tbody>
           <tr>
-            <td scope="col"><%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
+            <td scope="col">
+              <%= link_to @book.user do %>
+              <%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+              <%= @book.user.name %>
+              <% end %>
+              </td>
             <td scope="col"><%= @book.title %></td>
             <td scope="col"><%= @book.body %></td>
             <td scope="col">
