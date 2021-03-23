@@ -16,18 +16,11 @@
             </tr>
           </tbody>
         </table>
-        <% if @book.user.id == current_user.id %>
+
         <%= link_to edit_user_path(@book.user.id) do %>
           <button type="button" class="btn btn-success w-100">
             <i class="fas fa-user-cog"></i>
           </button>
-        <% end %>
-        <% else %>
-        <%= link_to user_path(current_user) do %>
-        <button type="button" class="btn btn-success w-100">
-          <i class="fas fa-user-cog"></i>
-        </button>
-        <% end %>
         <% end %>
       </div>
 
