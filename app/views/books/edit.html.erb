@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-8 col-5 px-5 px-sm-0 mx-auto">
+    <div class="mx-auto">
       <body>
       <h1>Editing Book</h1>
       <%= form_with model:@book, local:true do |f| %>
@@ -24,7 +24,7 @@
       <label for="book_body">Opinion</label><br/>
       <%= f.text_area :body %><br/>
 
-      <%= f.submit 'Update Book' %>
+      <button type="submit" class="btn btn-success">Update Book</button>
       <% end %>
 
       <%= link_to "Show", book_path(@book.id) %>

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-8 col-5 px-5 px-sm-0 mx-auto">
+    <div class=" mx-auto">
       <h2>User info</h2>
       <%= form_with model:@user, local:true do |f| %>
       <% if @user.errors.any? %>
@@ -25,7 +25,7 @@
       <label for="inputIntroduction">introduction</label><br/>
       <%= f.text_area :introduction %><br/>
 
-      <%= f.submit "Update User" %>
+      <button type="submit" class="btn btn-success">Update User</button>
       <% end %>
     </div>
   </div>
