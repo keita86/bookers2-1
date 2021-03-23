@@ -21,13 +21,10 @@
         about various books!
       </p>
 
-      <%= link_to new_user_session_path do %>
-        <button type="button" class="btn btn-primary w-100 my-3">Log in</button>
-      <% end %>
 
-      <%= link_to new_user_registration_path do %>
-        <button type="button" class="btn btn-success w-100">Sign up</button>
-      <% end %>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-primary w-100 my-3" %>
+
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success w-100" %>
 
     </div>
   </div>

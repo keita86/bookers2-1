@@ -17,12 +17,16 @@
           </tbody>
         </table>
         <% if @user.id == current_user.id %>
-          <%= link_to edit_user_path(@user.id) do %>
+        <%= link_to edit_user_path(@user.id) do %>
+          <button type="button" class="btn btn-success w-100">
           <i class="fas fa-user-cog"></i>
+          </button>
         <% end %>
         <% else %>
           <%= link_to user_path(current_user) do %>
+          <button type="button" class="btn btn-success w-100">
           <i class="fas fa-user-cog"></i>
+          </button>
           <% end %>
         <% end %>
       </div>
@@ -49,7 +53,10 @@
         <label for="book_body">Opinion</label><br/>
         <%= f.text_area :body %><br/>
 
-        <%= f.submit 'Create Book' %>
+        <button type="submit" class="btn btn-primary w-100">
+        Create Book
+        </button>
+
         <% end %>
       </div>
     </div>

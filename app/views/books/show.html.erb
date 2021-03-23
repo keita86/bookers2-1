@@ -18,16 +18,20 @@
         </table>
         <% if @book.user.id == current_user.id %>
         <%= link_to edit_user_path(@book.user.id) do %>
-          <i class="fas fa-user-cog"></i>
+          <button type="button" class="btn btn-success w-100">
+            <i class="fas fa-user-cog"></i>
+          </button>
         <% end %>
         <% else %>
         <%= link_to user_path(current_user) do %>
+        <button type="button" class="btn btn-success w-100">
           <i class="fas fa-user-cog"></i>
+        </button>
         <% end %>
         <% end %>
       </div>
 
-      <h1>New book</h1>
+      <h2>New book</h2>
       <%= form_with model:@post, local:true do |f| %>
       <% if @post.errors.any? %>
       <div id="error_explanation">
@@ -49,7 +53,9 @@
       <label for="book_body">Opinion</label><br/>
       <%= f.text_area :body %><br/>
 
-      <%= f.submit 'Create Book' %>
+      <button type="submit" class="btn btn-primary w-100">
+      Create Book
+      </button>
       <% end %>
     </div>
 
