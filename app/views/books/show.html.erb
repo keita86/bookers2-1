@@ -2,54 +2,9 @@
   <div class="row">
     <div class="col-md-3">
       <div class="mb-4">
-        <h2>User info</h2>
-        <image class="prf"><%= attachment_image_tag @book.user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %></image>
-        <table class="table">
-          <tbody>
-            <tr class="my-2">
-              <td>name</td>
-              <td><%= @book.user.name %></td>
-            </tr>
-            <tr class="my-2">
-              <td>introduction</td>
-              <td><%= @book.user.introduction %></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <%= link_to edit_user_path(@book.user.id) do %>
-          <button type="button" class="btn btn-success w-100">
-            <i class="fas fa-user-cog"></i>
-          </button>
-        <% end %>
+        <%= render 'users/info', user: @book.user %>
       </div>
-
-      <h2>New book</h2>
-      <%= form_with model:@post, local:true do |f| %>
-      <% if @post.errors.any? %>
-      <div id="error_explanation">
-        <h2>
-          <%= pluralize(@post.errors.count, "error") %>
-          prohibited this obj from being saved:
-        </h2>
-        <ul>
-          <% @post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-      <% end %>
-
-      <label for="book_title">Title</label><br/>
-      <%= f.text_field :title %><br/>
-
-      <label for="book_body">Opinion</label><br/>
-      <%= f.text_area :body %><br/>
-
-      <button type="submit" class="btn btn-primary w-100">
-      Create Book
-      </button>
-      <% end %>
+      <%= render 'books/form', book: @post %>
     </div>
 
     <div class="col-md-8 offset-md-1">
@@ -69,11 +24,50 @@
             <% if @book.user.id == current_user.id %>
               <%= link_to "Edit", edit_book_path(@book) %>
               <%= link_to "Destroy", book_path(@book), method: :delete, "data-cofirm" => "Are you sure?" %>
+            <% else %>
+              <p>コメント件数：<%= @book.book_comment.count %></p>
             <% end %>
             </td>
           </tr>
         </tbody>
       </table>
+      <div class="table">
+        <table>
+          <tbody>
+            <% @book.book_comment.each do |book_comment| %>
+            <tr>
+              <td scope="col">
+                <%= link_to book_comment.user do %>
+                <%= attachment_image_tag book_comment.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+                <%= book_comment.user.name %>
+                <% end %>
+              </td>
+              <td scope="col"><%= book_comment.comment %></td>
+              <td scope="col"></td>
+            </tr >
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="">
+        <%= form_with(model:[@book, @book_comment], local: true) do |f| %>
+        <% if @book_comment.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@book_comment.errors.count, "error") %>
+            prohibited this comment from being saved:
+          </h2>
+          <ul>
+            <% @book_comment.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+          <%= f.text_area :comment %>
+          <%= f.submit "送信" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
