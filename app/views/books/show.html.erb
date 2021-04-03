@@ -25,13 +25,31 @@
               <%= link_to "Edit", edit_book_path(@book) %>
               <%= link_to "Destroy", book_path(@book), method: :delete, "data-cofirm" => "Are you sure?" %>
             <% else %>
-              <p>コメント件数：<%= @book.book_comment.count %></p>
+              <td>
+              <% if @book.favorited_by?(current_user) %>
+                <p>
+                  <%= link_to book_favorite_path(@book), method: :delete do %>
+                    ❤️<%= @book.favorites.count %>いいね
+                  <% end %>
+                </p>
+                <% else %>
+                <p>
+                  <%= link_to book_favorites_path(@book), method: :post do %>
+                    💙<%= @book.favorites.count %>いいね
+                  <% end %>
+                </p>
+                <% end %>
+              </td>
+              <td>
+                <p>コメント件数：<%= @book.book_comment.count %></p>
+              </td>
             <% end %>
             </td>
           </tr>
         </tbody>
       </table>
       <div class="table">
+        <h3>Comments</h3>
         <table>
           <tbody>
             <% @book.book_comment.each do |book_comment| %>
@@ -43,7 +61,11 @@
                 <% end %>
               </td>
               <td scope="col"><%= book_comment.comment %></td>
-              <td scope="col"></td>
+              <td scope="col">
+                <% if book_comment.user == current_user %>
+                  <%= link_to "Destroy", book_book_comment_path(book_comment.book, book_comment), method: :delete %>
+                <% end %>
+              </td>
             </tr >
             <% end %>
           </tbody>
