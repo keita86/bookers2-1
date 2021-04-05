@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Follower Users</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @user.follower_user.where.not(id: current_user.id).each do |user| %>
+          <tr>
+            <td><%= attachment_image_tag user, :profile_image, :fill, 60, 60,  fallback: "no_image.jpg" %></td>
+            <td><%= user.name %></td>
+            <td><p>フォロー数<%= @user.followr.count %></p></td>
+            <td><p>フォロワー数<%= @user.followed.count %></p></td>
+            <td><%= link_to "Show", user_path(user.id) %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
