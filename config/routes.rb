@@ -4,16 +4,16 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  # フォローする
-  post 'follow/:id' => 'relationships#follow', as: 'follow'
-  # フォロー外す
-  post 'unfollow/:id' => 'relationships#unfollow', as: 'unfollow'
-  get "follow_index" => "relationships#follow_index"
-  get "follower_index" => "relationships#follower_index"
 
   root to: 'homes#top'
     get "/home/about" => "homes#about"
-  resources :users, only: [:show, :edit, :update, :index]
+    
+  resources :users, only: [:show, :edit, :update, :index] do
+    resource :relationships, only: [:create, :destroy]
+    get "followings" => "relationships#followings", as: 'followings'
+    get "followers" => "relationships#followers", as: 'followers'
+  end 
+
   resources :books do
     resources :book_comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]

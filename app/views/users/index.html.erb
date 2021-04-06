@@ -2,7 +2,31 @@
   <div class="row">
     <div class="col-md-3">
       <div class="mb-4">
-        <%= render 'users/info', user: current_user %>
+      <h2>User info</h2>
+        <image class="prf"><%= attachment_image_tag(current_user, :profile_image, :fill, 100, 100,  fallback: "no_image.jpg") %></image>
+        <table class="table">
+          <tbody>
+            <tr class="my-2">
+              <td>name</td>
+              <td><%= current_user.name %></td>
+            </tr>
+            <tr class="my-2">
+              <td>introduction</td>
+              <td><%= current_user.introduction %></td>
+            </tr>
+            <tr class="my-2">
+              <td>follows</td>
+              <td><%= current_user.followings.count %></td>
+            </tr>
+            <tr class="my-2">
+              <td>followes</td>
+              <td><%= current_user.followers.count %></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class='row'>
+          <%= link_to '',edit_user_path(current_user),class: "btn btn-outline-secondary btn-block fas fa-user-cog edit_user_#{current_user.id}" %>
+        </div>
       </div>
       <div>
         <%= render 'books/form', book: @book %>
@@ -25,14 +49,14 @@
           <tr>
             <td><%= attachment_image_tag user, :profile_image, :fill, 60, 60,  fallback: "no_image.jpg" %></td>
             <td><%= user.name %></td>
-            <td><p>フォロー数<%= @user.followr.count %></p></td>
-            <td><p>フォロワー数<%= @user.followed.count %></p></td>
+            <td><p>フォロー数<%= user.followings.count %></p></td>
+            <td><p>フォロワー数<%= user.followers.count %></p></td>
             <td>
-              <% unless @user == current_user %>
-                <% if current_user.following?(@user) %>
-                  <%= link_to 'フォローを外す', unfollow_path(@user.id), method: :post %>
+              <% unless user == current_user %>
+                <% if current_user.following?(user) %>
+                  <%= link_to 'フォローを外す', user_relationships_path(user.id), method: :delete %>
                 <% else %>
-                  <%= link_to 'フォローする', follow_path(@user.id), method: :post %>
+                  <%= link_to 'フォローする', user_relationships_path(user.id), method: :post %>
                 <% end %>
               <% end %>
             </td>
