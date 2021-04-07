@@ -15,9 +15,9 @@
       <div class="container">
         <div class="row">
           <div class="col text-white">
-            <a href="root_path">
+            <%= link_to root_path do %>
               <strong class="text-white">Bookers</strong>
-              </a>
+            <% end %>
             </div>
 
             <% if user_signed_in? %>
@@ -74,6 +74,20 @@
     <%= flash[:notice] %>
     </div>
     <% end %>
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto pb-3">
+        <% if user_signed_in? %>
+          <%= form_tag(search_path, method: :get) do %>
+          <%= select_tag 'range' ,options_for_select([['---選択してください---', ''], ['User', '1'], ['Book', '2']]) %>
+            <%= select_tag 'search', options_for_select([["前方一致", "forward_match"], ["後方一致", "backward_match"], ["完全一致", "perfect_match"], ["部分一致", "partial_match"]]) %>
+            <%= text_field_tag (:word) %>
+            <%= submit_tag "検索" %>
+          <% end %>
+        <% end %>
+        </div>
+      </div>
+    </div>
 
     <%= yield %>
     </main>
