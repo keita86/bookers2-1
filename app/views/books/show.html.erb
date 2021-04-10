@@ -26,19 +26,7 @@
               <%= link_to "Destroy", book_path(@book), method: :delete, "data-cofirm" => "Are you sure?" %>
             <% else %>
               <td>
-              <% if @book.favorited_by?(current_user) %>
-                <p>
-                  <%= link_to book_favorites_path(@book), method: :delete, remote: true do %>
-                    ❤️<%= @book.favorites.count %>いいね
-                  <% end %>
-                </p>
-                <% else %> 
-                <p>
-                  <%= link_to book_favorites_path(@book), method: :post, remote: true do %>
-                    💙<%= @book.favorites.count %>いいね
-                  <% end %>
-                </p>
-                <% end %>
+                <%= render "favorites/favorite", book: @book %>
               </td>
               <td>
                 <p>コメント件数：<%= @book.book_comment.count %></p>
