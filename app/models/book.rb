@@ -1,7 +1,7 @@
 class Book < ApplicationRecord
   belongs_to :user
   # attachment :profile_image
-  has_many :book_comment, dependent: :destroy
+  has_many :book_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
   def favorited_by?(user)
